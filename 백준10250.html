@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function hotel(h,w,n){
+            var ho = parseInt(n/h+1);
+            var floor = n%h;
+            if(ho<10){
+               return `${floor}0${ho}`;
+            }
+            else if(ho>10){
+               return `${floor}${ho}`;
+            }
+
+        }document.write(hotel(30,50,72))
+
+    </script>
+</body>
+</html>

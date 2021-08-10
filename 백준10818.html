@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        var N = Number(prompt("N개의 개수 입력","1"))
+        var list = []
+        
+        for(a=1;a<=N;a++){
+            var num = Number(prompt("정수입력"))
+            list.push(num);
+        }
+
+        result = list.sort();
+
+
+        document.write(`최대값 : ${result.pop()}<br>최소값 : ${result[0]} `);
+
+
+    </script>
+</body>
+</html>

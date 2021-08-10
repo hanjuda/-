@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        //입력받은 수가 몇번째 줄인가
+        var num = Number(prompt("몇번째 입력","1"))
+
+        var i=1;        //i는 몇번째 줄인가
+        while(num>0){
+            num=num-i;
+            i++;
+        }
+        var line= i-1;
+
+        if(line%2==0){
+            document.write(`${line+num}/${-num+1}`)
+        }else{
+            document.write(`${-num+1}/${line+num}`)
+        }
+        
+
+
+    </script>
+</body>
+</html>

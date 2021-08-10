@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        /*
+                생성자 2,4,8,6,10 
+        1=>1+1 2    3=>3+3 6
+        2=>2+2 4    5+5 = 10
+        4=>4+4 8
+        8=>8+8 16
+        16=>16+1+6 23
+        23
+        어떤숫자를 입력받으면 100까지
+        입력값과 출력값을 리스트에 담는다
+        입력값은 1부터 100까지
+        리스트는 생성자만 담는다
+        입력값안에 생성자가없으면 -1이 안뜬다
+        그값을 출력한다*/
+        function jari(n){
+        switch(n.length){
+            
+            case 4:
+                num =Number(n[3])+Number(n[2])+Number(n[1])+Number(n[0])+Number(n);
+                break;
+
+            case 3:
+                num =Number(n[2])+Number(n[1])+Number(n[0])+Number(n);
+                break;
+            case 2:
+            num =Number(n[1])+Number(n[0])+Number(n);
+                break;
+            default:
+            num = Number(n)+ Number(n);
+                break;
+        }
+        return num;
+        }
+        var input=[];
+        var output=[];
+        for(var n=1;n<10001;n++){
+            input.push(String(n));
+        }
+        //document.write(input)
+       
+        for(var a=0;a<input.length;a++){
+          var b  =jari(input[a])
+            output.push(b);
+        }
+       // document.write(output);
+        
+        for(var i=0;i<input.length;i++){
+            var d = output.indexOf(Number(input[i]));
+            if(d==-1){
+                document.write(input[i],"<br>");
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

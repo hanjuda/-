@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        function snail(a,b,v){
+           var i=1
+           while(i>0){
+               v=v-a;
+               if(v<=0) break;
+               v=v+b;
+               i++;
+           }return i;
+        }
+
+        document.write(snail(100,99,1000000000))
+
+
+    </script>
+</body>
+</html>

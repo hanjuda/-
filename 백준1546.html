@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <script>
+        var N = Number(prompt("과목개수","1"))
+        var list1 = []
+
+        for(a=0;a<N;a++){
+            var num = Number(prompt("과목점수","1"));
+            list1.push(num);
+        }
+        
+        list2 = list1.sort(function(a, b)  {
+            if(a > b) return 1;
+            if(a === b) return 0;
+            if(a < b) return -1;
+            });
+                document.write(list2,"<br><br>")
+
+
+        function average(num){
+         var b=list2[num]/list2[N-1]*100
+         return b;
+        }
+
+        var result =0;
+        for(i=0;i<list2.length;i++){
+            result+=  average(i);
+        }
+        document.write(result/N);
+    </script>
+</body>
+</html>
